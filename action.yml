@@ -16,3 +16,6 @@ runs:
     - ${{ inputs.path }}
     - "--max-line-length"
     - ${{ inputs.max-line-length }}
+branding:
+  icon: 'align-left'
+  color: 'yellow'
