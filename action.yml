@@ -5,8 +5,12 @@ inputs:
     description: 'Path to lint'
     required: true
     default: '.'
+  extra:
+    description: 'Extra args'
+    required: false
 runs:
   using: 'docker'
   image: 'docker://alpine/flake8'
   args:
     - ${{ inputs.path }}
+    - ${{ inputs.extra }}
