@@ -1,0 +1,12 @@
+name: 'Flake8'
+description: 'Flake8 linting'
+inputs:
+  path:
+    description: 'Path to lint'
+    required: true
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'alpine/flake8'
+  args:
+    - ${{ inputs.path }}
