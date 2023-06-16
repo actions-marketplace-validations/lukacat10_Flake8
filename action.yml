@@ -5,12 +5,14 @@ inputs:
     description: 'Path to lint'
     required: true
     default: '.'
-  extra:
-    description: 'Extra args'
+  max-line-length:
+    description: 'Max line length'
     required: false
+    default: '79'
 runs:
   using: 'docker'
   image: 'docker://alpine/flake8'
   args:
     - ${{ inputs.path }}
-    - ${{ inputs.extra }}
+    - "--max-line-length"
+    - ${{ inputs.max-line-length }}
