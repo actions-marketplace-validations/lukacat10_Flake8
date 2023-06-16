@@ -1,5 +1,5 @@
-name: 'Flake8'
-description: 'Flake8 linting'
+name: 'Flake8 Linting'
+description: 'Flake8 Linting'
 inputs:
   path:
     description: 'Path to lint'
